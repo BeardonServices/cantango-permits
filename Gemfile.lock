@@ -1,5 +1,6 @@
-PATH
-  remote: ~/local_gems/cantango-api
+GIT
+  remote: git://github.com/mwean/cantango-api.git
+  revision: 1542a1abbc5c95e8e5dc52a5f751c82785456ce7
   specs:
     cantango-api (0.1.3)
       cantango-config (>= 0.1.9.2)
@@ -9,8 +10,9 @@ PATH
       sugar-high (~> 0.6.2)
       sweetloader (~> 0.1.6)
 
-PATH
-  remote: ~/local_gems/cantango-config
+GIT
+  remote: git://github.com/mwean/cantango-config.git
+  revision: b3070b64291e987abee9a3b9431894742f94ac80
   specs:
     cantango-config (0.2.1)
       cantango-core (~> 0.1.9)
@@ -19,8 +21,9 @@ PATH
       sugar-high (>= 0.6.1)
       sweetloader (~> 0.1.6)
 
-PATH
-  remote: ~/local_gems/cantango-core
+GIT
+  remote: git://github.com/mwean/cantango-core.git
+  revision: 237ec582eb238e1f4d2aa2be88796e793dace38e
   specs:
     cantango-core (0.1.9.3)
       cancan (>= 1.4)

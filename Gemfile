@@ -6,9 +6,9 @@ group :default do
   gem 'sweetloader',      '>= 0.1.6'
   gem 'hashie',           '>= 1.2.0'
   
-  gem 'cantango-core', path: '~/local_gems/cantango-core'
-  gem 'cantango-config', path: '~/local_gems/cantango-config'
-  gem 'cantango-api', path: '~/local_gems/cantango-api'
+  gem 'cantango-core', git: 'git://github.com/mwean/cantango-core.git'
+  gem 'cantango-config', git: 'git://github.com/mwean/cantango-config.git'
+  gem 'cantango-api', git: 'git://github.com/mwean/cantango-api.git'
 end
 
 group :development do
