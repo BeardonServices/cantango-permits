@@ -9,9 +9,9 @@ end
 
 CanTango.configure do |config|
   config.clear!
-  config.ability.mode = :no_cache
-  config.engine(:permit).set :on
-  config.debug!
+  # config.ability.mode = :no_cache
+  # config.engine(:permit).set :on
+  # config.debug!
 end
 
 class UserPermit < CanTango::Permit::UserType
@@ -26,7 +26,7 @@ class UserPermit < CanTango::Permit::UserType
   end
 end
 
-describe CanTango::Engine::Permit do
+describe CanTango::Engine::Permits do
   context 'cache' do
     before do
       @user = User.new 'kris', 'kris@mail.ru', :roles => [:editor]

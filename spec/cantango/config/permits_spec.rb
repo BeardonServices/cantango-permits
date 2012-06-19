@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'cantango/configuration/permit_registry_ex'
+# require 'cantango/configuration/permit_registry_ex'
 
 class Menu
 end
@@ -37,7 +37,7 @@ end
 describe CanTango::Config::Permits do
   subject { CanTango::Config::Permits.instance }
 
-  it_should_behave_like CanTango::Config::PermitRegistry
+  # it_should_behave_like CanTango::Config::PermitRegistry
 
   describe 'clear_permits_executed!' do
     specify { CanTango.config.permits.executed.should be_empty }

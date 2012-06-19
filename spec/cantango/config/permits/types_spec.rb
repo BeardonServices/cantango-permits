@@ -1,9 +1,6 @@
 require 'spec_helper'
 
-class Types
-  include Singleton
-  
-  include CanTango::Config::Permits::Types
+class Types < CanTango::Config::Permits::Types
 end
 
 describe CanTango::Config::Permits::Types do

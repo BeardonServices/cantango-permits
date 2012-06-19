@@ -1,8 +1,10 @@
 require 'spec_helper'
 require 'fixtures/models'
 
-class MyOwnPermit < CanTango::Permit::Base
-  include CanTango::Permit::Helper::Host
+module CanTango::Permit
+  class MyOwnPermit < Base
+    include CanTango::Permit::Helper::Host
+  end
 end
 
 class RequestHost

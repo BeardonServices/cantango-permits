@@ -9,26 +9,30 @@ end
 
 CanTango.configure do |config|
   config.clear!
-  config.ability.mode = :no_cache
-  config.engine(:permit) do |engine|
-    engine.mode = :no_cache
-  end
-  config.debug!
+  # config.ability.mode = :no_cache
+  # config.engine(:permit) do |engine|
+  #   engine.mode = :no_cache
+  # end
+  # config.debug!
 end
 
-class UserPermit < CanTango::UserPermit
-  def initialize ability
-    super
-  end
+module CanTango
+  module Permit
+    class UserPermit < User
+      def initialize ability
+        super
+      end
 
-  protected
+      protected
 
-  def calc_rules
-    can :read, Article
+      def calc_rules
+        can :read, Article
+      end
+    end
   end
 end
 
-describe CanTango::PermitEngine do
+describe CanTango::Engine::Permits do
   context 'no-cache' do
     before do
       @user = User.new 'kris', 'kris@mail.ru', :roles => [:editor]

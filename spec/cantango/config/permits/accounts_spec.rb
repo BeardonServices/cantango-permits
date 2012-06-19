@@ -1,9 +1,6 @@
 require 'spec_helper'
 
-class Accounts
-  include Singleton
-  
-  include CanTango::Config::Permits::Accounts
+class Accounts < CanTango::Config::Permits::Accounts
 end
 
 describe CanTango::Config::Permits::Accounts do

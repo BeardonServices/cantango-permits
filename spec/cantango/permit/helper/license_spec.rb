@@ -1,8 +1,10 @@
 require 'spec_helper'
 require 'fixtures/models'
 
-class MyOwnPermit < CanTango::Ability::Base
-  include CanTango::Permit::Helper::License
+module CanTango::Ability
+  class MyOwnPermit < Base
+    include CanTango::Permit::Helper::License
+  end
 end
 
 class BloggingLicense < CanTango::License

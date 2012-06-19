@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 class Enabling
-  include Singleton
+  include Singleton  
   
   include CanTango::Config::Permits::Enabling
 end
